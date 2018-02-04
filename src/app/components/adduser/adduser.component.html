@@ -1,0 +1,28 @@
+<div class="form-wrapper">
+        <form #userform = "ngForm" (ngSubmit) = "onClickSubmit(userform.value)">
+          <div class="form-group">
+              <label for="firstName">First Name:</label>
+              <input id="firstName" name="firstName" type="text" class="form-control" placeholder="First Name" ngModel>
+          </div>
+          <div class="form-group">
+              <label for="LastName">Last Name:</label>
+              <input id="lastName"  name="lastName" type="text" class="form-control" ngModel>
+          </div>
+          <div class="form-group">
+              <label for="emailAdd">Email Address:</label>
+              <input id="emailAdd" name="emailAdd" type="text" class="form-control" ngModel>
+          </div>
+          <div class="form-group">
+              <label for="userRole">Role:</label>
+              <select name="userRole" id="userRole" ngModel>
+                <option *ngFor="let role of roles">{{role}}</option>
+              </select>
+          </div>
+          <div class="form-group">
+              <label for="submit"></label>
+              <input type="submit" id="submit" value="Submit" > 
+          </div>
+          
+        </form>
+        
+      </div>
